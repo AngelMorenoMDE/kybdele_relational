@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmftool:ToolRegistry
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
+  <palette
+      title="gmf_relational_modelPalette">
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Create Tools"
+        description="Create Tools"
+        collapsible="true"
+        active="//@palette/@tools.0">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Relation"
+          description="Create new Relation">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/iconRelation.gif"
+            bundle="gmf_relational_model.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/iconRelation.gif"
+            bundle="gmf_relational_model.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Attribute"
+          description="Create new Attribute">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/iconAttribute.gif"
+            bundle="gmf_relational_model.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/iconAttribute.gif"
+            bundle="gmf_relational_model.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="LinkFK"
+          description="Object to set FK UPDATE/DELETE options">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/iconLinkFK.gif"
+            bundle="gmf_relational_model.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/iconLinkFK.gif"
+            bundle="gmf_relational_model.edit"/>
+      </tools>
+    </tools>
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Properties Tools"
+        description="Properties Tools"
+        collapsible="true"
+        active="//@palette/@tools.1">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="AttributeReferencePK"
+          description="Set Attribute as PK">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/iconPK.gif"
+            bundle="gmf_relational_model.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/iconPK.gif"
+            bundle="gmf_relational_model.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:GenericTool"
+          title="AttributeIsPK"
+          description="Change PK value for selected Attribute"
+          toolClass="AttributeIsPKTool">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/iconPK.gif"
+            bundle="gmf_relational_model.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/iconPK.gif"
+            bundle="gmf_relational_model.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="AttributeIsFK"
+          description="Associate Attribute with LinkFK object">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/iconFK.gif"
+            bundle="gmf_relational_model.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/iconFK.gif"
+            bundle="gmf_relational_model.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Referred Relation"
+          description="Associate FK object with referenced Relation">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/iconCK.gif"
+            bundle="gmf_relational_model.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/iconCK.gif"
+            bundle="gmf_relational_model.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:GenericTool"
+          title="AttributeIsUN"
+          description="Change UNIQUE value for selected Attribute"
+          toolClass="AttributeIsUNTool">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/iconUN.gif"
+            bundle="gmf_relational_model.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/iconUN.gif"
+            bundle="gmf_relational_model.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:GenericTool"
+          title="AttributeIsNN"
+          description="Change NOT NULL value for selected Attribute"
+          toolClass="AttributeIsNNTool">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/iconNN.gif"
+            bundle="gmf_relational_model.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/iconNN.gif"
+            bundle="gmf_relational_model.edit"/>
+      </tools>
+    </tools>
+  </palette>
+</gmftool:ToolRegistry>

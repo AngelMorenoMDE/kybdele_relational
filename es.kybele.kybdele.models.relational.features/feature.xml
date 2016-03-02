@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="es.kybele.kybdele.models.relational.features"
+      label="E/R Relational GMF Diagrammer - Features"
+      version="0.0.2.stable"
+      provider-name="Grupo de Investigación Kybele">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <plugin
+         id="es.kybele.kybdele.models.relational.diagram"
+         download-size="0"
+         install-size="0"
+         version="0.0.2.stable"
+         unpack="false"/>
+
+   <plugin
+         id="es.kybele.kybdele.models.relational.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.2.stable"
+         unpack="false"/>
+
+   <plugin
+         id="es.kybele.kybdele.models.relational.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.2.stable"
+         unpack="false"/>
+
+   <plugin
+         id="es.kybele.kybdele.models.relational.model"
+         download-size="0"
+         install-size="0"
+         version="0.0.2.stable"
+         unpack="false"/>
+
+   <plugin
+         id="es.kybele.kybdele.models.relational.tests"
+         download-size="0"
+         install-size="0"
+         version="0.0.2.stable"
+         unpack="false"/>
+
+</feature>

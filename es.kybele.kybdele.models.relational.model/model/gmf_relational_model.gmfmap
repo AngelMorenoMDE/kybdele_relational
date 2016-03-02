@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfmap:Mapping
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:gmfmap="http://www.eclipse.org/gmf/2008/mappings"
+    xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
+  <nodes>
+    <containmentFeature
+        href="gmf_relational_model.ecore#//Schema/ScontainsRelations"/>
+    <ownedChild>
+      <domainMetaElement
+          href="gmf_relational_model.ecore#//Relation"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="gmf_relational_model.gmfgraph#RelationName"/>
+        <features
+            href="gmf_relational_model.ecore#//Relation/name"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="gmf_relational_model.gmftool#//@palette/@tools.0/@tools.0"/>
+      <diagramNode
+          href="gmf_relational_model.gmfgraph#Relation"/>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.0/@ownedChild/@children.0/@ownedChild">
+        <containmentFeature
+            href="gmf_relational_model.ecore#//Relation/containsAttributes"/>
+        <ownedChild>
+          <domainMetaElement
+              href="gmf_relational_model.ecore#//Attribute"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping">
+            <diagramLabel
+                href="gmf_relational_model.gmfgraph#AttributeName"/>
+            <features
+                href="gmf_relational_model.ecore#//Attribute/name"/>
+          </labelMappings>
+          <labelMappings
+              readOnly="true">
+            <diagramLabel
+                href="gmf_relational_model.gmfgraph#AttributeFlag"/>
+          </labelMappings>
+          <labelMappings
+              readOnly="true">
+            <diagramLabel
+                href="gmf_relational_model.gmfgraph#AttributeSeparator"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="gmf_relational_model.gmftool#//@palette/@tools.0/@tools.1"/>
+          <diagramNode
+              href="gmf_relational_model.gmfgraph#Attribute"/>
+        </ownedChild>
+      </children>
+      <compartments
+          children="//@nodes.0/@ownedChild/@children.0">
+        <compartment
+            href="gmf_relational_model.gmfgraph#CompartmentAttributes"/>
+      </compartments>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="gmf_relational_model.ecore#//Schema/ScontainsLinksFK"/>
+    <ownedChild>
+      <domainMetaElement
+          href="gmf_relational_model.ecore#//LinkFK"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="gmf_relational_model.gmfgraph#DeletePolicy"/>
+        <features
+            href="gmf_relational_model.ecore#//LinkFK/delete"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="gmf_relational_model.gmfgraph#ModifyPolicy"/>
+        <features
+            href="gmf_relational_model.ecore#//LinkFK/modify"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="gmf_relational_model.gmftool#//@palette/@tools.0/@tools.2"/>
+      <diagramNode
+          href="gmf_relational_model.gmfgraph#LinkFK"/>
+    </ownedChild>
+  </nodes>
+  <links>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="gmf_relational_model.gmftool#//@palette/@tools.1/@tools.2"/>
+    <diagramLink
+        href="gmf_relational_model.gmfgraph#sourceLinkFK"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="gmf_relational_model.ecore#//Attribute/isFK"/>
+  </links>
+  <links>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="gmf_relational_model.gmftool#//@palette/@tools.1/@tools.3"/>
+    <diagramLink
+        href="gmf_relational_model.gmfgraph#targetLinkFK"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="gmf_relational_model.ecore#//LinkFK/target"/>
+  </links>
+  <diagram>
+    <diagramCanvas
+        href="gmf_relational_model.gmfgraph#gmf_relational_model"/>
+    <domainModel
+        href="gmf_relational_model.ecore#/"/>
+    <domainMetaElement
+        href="gmf_relational_model.ecore#//Schema"/>
+    <palette
+        href="gmf_relational_model.gmftool#//@palette"/>
+  </diagram>
+  <audits
+      id="Constraints"
+      name="Constraints"
+      description="Constraints">
+    <childContainers
+        id="SchemaConstraints"
+        name="SchemaConstraints"
+        description="SchemaConstraints">
+      <audits
+          name="schemaContainsRelation"
+          description="."
+          id="schemaContainsRelation"
+          severity="INFO"
+          message="The scheme is empty.">
+        <rule
+            body="self.ScontainsRelations -> size() > 0"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="gmf_relational_model.ecore#//Schema"/>
+        </target>
+      </audits>
+      <audits
+          name="relationNameUnique"
+          description="Relations must have different name."
+          id="relationNameUnique"
+          message="Relations must have different name.">
+        <rule
+            body="self.ScontainsRelations -> forAll(r1,r2 | r1 &lt;> r2 implies r1.name &lt;> r2.name)"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="gmf_relational_model.ecore#//Schema"/>
+        </target>
+      </audits>
+    </childContainers>
+    <childContainers
+        id="AttributeConstraints"
+        name="AttributeConstraints"
+        description="AttributeConstraints">
+      <audits
+          name="undefinedAttributeType"
+          description="You have not defined any for this attribute."
+          id="undefinedAttributeType"
+          severity="WARNING"
+          message="You have not defined any for this attribute.">
+        <rule
+            body="self.type &lt;> EGenericType :: UNDEFINED"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="gmf_relational_model.ecore#//Attribute"/>
+        </target>
+      </audits>
+      <audits
+          name="attributeNameDefined"
+          description="You must define a name for this attribute."
+          id="attributeNameDefined"
+          message="You must define a name for this attribute.">
+        <rule
+            body="not self.name.oclIsUndefined()"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="gmf_relational_model.ecore#//Attribute"/>
+        </target>
+      </audits>
+      <audits
+          name="pkWellFormed"
+          description="A primary key attribute must be unique and not null."
+          id="pkWellFormed"
+          message="A primary key attribute must be unique and not null.">
+        <rule
+            body="(self.isPK and self.isNN and self.isUN) or not(self.isPK)"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="gmf_relational_model.ecore#//Attribute"/>
+        </target>
+      </audits>
+    </childContainers>
+    <childContainers
+        id="RelationConstraints"
+        name="RelationConstraints"
+        description="RelationConstraints">
+      <audits
+          name="almostOneAttribute"
+          description="This relation must contain at least one attribute."
+          id="almostOneAttribute"
+          message="This relation must contain at least one attribute.">
+        <rule
+            body="self.containsAttributes -> size() >= 1"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="gmf_relational_model.ecore#//Relation"/>
+        </target>
+      </audits>
+      <audits
+          name="relationHasPK"
+          description="Is not defined a primary key for this relation."
+          id="relationHasPK"
+          message="Is not defined a primary key for this relation.">
+        <rule
+            body="not self.hasPK -> isEmpty()"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="gmf_relational_model.ecore#//Relation"/>
+        </target>
+      </audits>
+      <audits
+          name="attributeNameUnique"
+          description="This relation can not contain two attributes with the same name."
+          id="attributeNameUnique"
+          message="This relation can not contain two attributes with the same name.">
+        <rule
+            body="self.containsAttributes -> forAll(a1,a2 | a1 &lt;> a2 implies a1.name &lt;> a2.name)"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="gmf_relational_model.ecore#//Relation"/>
+        </target>
+      </audits>
+      <audits
+          name="relationNameDefined"
+          description="You must define a name for this relation."
+          id="relationNameDefined"
+          message="You must define a name for this relation.">
+        <rule
+            body="not self.name.oclIsUndefined()"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="gmf_relational_model.ecore#//Relation"/>
+        </target>
+      </audits>
+    </childContainers>
+    <childContainers
+        id="LinkFKConstraints"
+        name="LinkFKConstraints"
+        description="LinkFKConstraints">
+      <audits
+          name="invalidTargetRelation"
+          description="The source relation must contain a primary key or candidate key."
+          id="invalidTargetRelation"
+          message="The source relation must contain a primary key or candidate key.">
+        <rule
+            body="not(self.target.oclIsUndefined()) and ((self.target.containsAttributes -> exists(isPK))or(self.target.containsAttributes -> exists(isUN)))"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="gmf_relational_model.ecore#//LinkFK"/>
+        </target>
+      </audits>
+      <audits
+          name="unCompleteLink"
+          description="Link incomplete, specify source and target."
+          id="unCompleteLink"
+          message="Link incomplete, specify source and target.">
+        <rule
+            body="(not (self.target.oclIsUndefined()))and(self.source ->size()>0)"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="gmf_relational_model.ecore#//LinkFK"/>
+        </target>
+      </audits>
+    </childContainers>
+  </audits>
+</gmfmap:Mapping>

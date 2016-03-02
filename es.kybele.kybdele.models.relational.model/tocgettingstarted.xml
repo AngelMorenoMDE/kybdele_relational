@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Getting Started" link_to="toc.xml#gettingstarted" topic="html/gettingstarted/mainGettingStarted.html"> 
+
+ <topic href="html/gettingstarted/createProject.html" label="Create Project"></topic>
+ <topic href="html/gettingstarted/createRelation.html" label="Create Relation"></topic>
+ <topic href="html/gettingstarted/createAttribute.html" label="Add Attribute"></topic>
+ <topic href="html/gettingstarted/setAttributePK.html" label="Set attribute as PK"></topic>
+ <topic href="html/gettingstarted/setAttributeFK.html" label="Set attribute as FK"></topic>
+ <topic href="html/gettingstarted/setAttributeUN.html" label="Set attribute as UN"></topic>
+ <topic href="html/gettingstarted/setAttributeNN.html" label="Set attribute as NN"></topic>
+ <topic href="html/gettingstarted/validateSchema.html" label="Validate model"></topic>
+
+</toc>

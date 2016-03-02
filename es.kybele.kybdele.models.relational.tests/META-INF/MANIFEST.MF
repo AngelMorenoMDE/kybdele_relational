@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: E/R Relational GMF Diagrammer - Tests Plug-In
+Bundle-SymbolicName: es.kybele.kybdele.models.relational.tests;singleton:=true
+Bundle-Version: 0.0.2.stable
+Bundle-ClassPath: .
+Bundle-Vendor: Grupo de Investigación Kybele
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: gmf_relational_model.gmf_relational_model.tests
+Require-Bundle: org.eclipse.core.runtime,
+ es.kybele.kybdele.models.relational.model;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;visibility:=reexport,
+ org.junit;visibility:=reexport
+Bundle-ActivationPolicy: lazy

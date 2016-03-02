@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+	<!-- @generated gmf_relational_model
+	Al incluir en un mismo archivo tanto el modelo como el diagrama eliminamos el extension point del archivo que contiene
+	unicamente el modelo.
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="gmf_relational_model.gmf_relational_model.presentation.Gmf_relational_modelModelWizardID"
+            name="%_UI_Gmf_relational_modelModelWizard_label"
+            class="gmf_relational_model.gmf_relational_model.presentation.Gmf_relational_modelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Gmf_relational_modelModelFile.gif">
+         <description>%_UI_Gmf_relational_modelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension> -->
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated gmf_relational_model -->
+      <editor
+            id="gmf_relational_model.gmf_relational_model.presentation.Gmf_relational_modelEditorID"
+            name="%_UI_Gmf_relational_modelEditor_label"
+            icon="icons/full/obj16/Gmf_relational_modelModelFile.gif"
+            extensions="rm"
+            class="gmf_relational_model.gmf_relational_model.presentation.Gmf_relational_modelEditor"
+            contributorClass="gmf_relational_model.gmf_relational_model.presentation.Gmf_relational_modelActionBarContributor">
+      </editor>
+      <!-- @generated gmf_relational_model -->
+      <editor
+            id="gmf_relational_model.gmf_relational_model.presentation.Gmf_relational_modelEditorID"
+            name="%_UI_Gmf_relational_modelEditor_label"
+            icon="icons/full/obj16/Gmf_relational_modelModelFile.gif"
+            extensions="rmd"
+            class="gmf_relational_model.gmf_relational_model.presentation.Gmf_relational_modelEditor"
+            contributorClass="gmf_relational_model.gmf_relational_model.presentation.Gmf_relational_modelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

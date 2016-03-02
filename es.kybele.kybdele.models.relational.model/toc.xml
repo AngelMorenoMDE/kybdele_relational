@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="RELATIONAL MODEL" topic="html/toc.html">
+   <topic href="html/gettingstarted/mainGettingStarted.html" label="Getting started">
+      <anchor id="gettingstarted"/>
+   </topic>
+   <topic href="html/constraints/mainConstraints.html" label="Constraints">
+      <anchor id="constraints"/>
+   </topic>
+</toc>

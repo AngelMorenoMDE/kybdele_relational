@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Set attribute as FK</title>
+</head>
+
+<body>
+<h1>Set attribute as FK</h1>
+
+To create a foreign key, we divide the process into two parts:
+<br>
+<br>
+<h3>Create LinkFK</h3>
+LinkFK is the object that will allow defining deleted and updated policies of the 
+foreign key reference.<br>
+To create a LinkFK we know that there are two ways, 
+the first being by clicking on the <b>LinkFK Tool</b> GMF tool palette.
+<div class="imagen" style="width:100%;height:auto;">  
+	<br><br><img src="./images/setAttributeIsFK1.png" alt="LinkFK Tool" style="max-width:100%;">
+</div>
+<br><br>
+Below, we click where you want to place the LinkFK.
+After after select place, LinkFK will have been created correctly.
+<div class="imagen" style="width:100%;height:auto;">  
+	<br><br><img src="./images/setAttributeIsFK2.png" alt="LinkFK" style="max-width:100%;">
+</div>
+<br><br><br>
+
+
+the second way is by placing the cursor on the diagram. 
+One dialog where we can see the <b>LinkFK Tool</b> appears.
+<div class="imagen" style="width:100%;height:auto;">  
+	<br><br><img src="./images/setAttributeIsFK3.png" alt="LinkFK Tool" style="max-width:100%;">
+</div>
+<br><br>
+Select it and the LinkFK appear in that position.
+
+<br>
+<br>
+
+<h3>Establish references </h3>
+Once created the Link we must establish references between different attributes and relation.
+To do this, we have two tools: 
+
+<h4>AttributeIsFK </h4>
+With this tool we define attributes refer to a relation with the object linkFK.
+To do this we know that there are two ways, 
+the first being by clicking on the <b>AttributeIsFK Tool</b> GMF tool palette.
+<div class="imagen" style="width:100%;height:auto;">  
+	<br><br><img src="./images/setAttributeIsFK4.png" alt="AttributeIsFK Tool" style="max-width:100%;">
+</div><br><br>
+Click on the attribute you want to convert in FK and drag to the object LinkFK.
+<div class="imagen" style="width:100%;height:auto;">  
+	<br><br><img src="./images/setAttributeIsFK5.png" alt="AttributeIsFK Drag" style="max-width:100%;">
+</div><br><br>
+Finally, the reference has established.
+<div class="imagen" style="width:100%;height:auto;">  
+	<br><br><img src="./images/setAttributeIsFK6.png" alt="AttributeIsFK" style="max-width:100%;">
+</div><br><br>
+The second way is to place the mouse over the attribute and select the arrow coming out of it.
+<div class="imagen" style="width:100%;height:auto;">  
+	<br><br><img src="./images/setAttributeIsFK7.png" alt="AttributeIsFK" style="max-width:100%;">
+</div><br><br>
+Then drag as in the first mode to the link object FK.
+
+<h4>ReferencedRelation </h4>
+With this tool indicate relation to reference the object LinkFK.
+To do this we know that there are two ways, 
+the first being by clicking on the <b>Referred Relation Tool</b> GMF tool palette.
+<div class="imagen" style="width:100%;height:auto;">  
+	<br><br><img src="./images/setAttributeIsFK8.png" alt="Referred Relation Tool" style="max-width:100%;">
+</div><br><br>
+Click on the LinkFK object and drag to the referred relation.
+<div class="imagen" style="width:100%;height:auto;">  
+	<br><br><img src="./images/setAttributeIsFK9.png" alt="Refererred Relation Drag" style="max-width:100%;">
+</div><br><br>
+Finally, the reference has established.
+<div class="imagen" style="width:100%;height:auto;">  
+	<br><br><img src="./images/setAttributeIsFK10.png" alt="LinkFK Complete" style="max-width:100%;">
+</div><br><br>
+The second way is to place the mouse over the LinkFK and select the arrow coming out of it.
+<div class="imagen" style="width:100%;height:auto;">  
+	<br><br><img src="./images/setAttributeIsFK11.png" alt="AttributeIsFK" style="max-width:100%;">
+</div><br><br>
+Then drag as in the first mode to the relation.
+<br>
+<br>
+<div style="border:0px  solid">
+</div>
+</body>
+</html>
